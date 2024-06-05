@@ -8,7 +8,7 @@ const createAcademicFacultyIntoDB = async (payload: TAcademicFaculty) => {
 }
 
 const getAllAcademicFacultyFromDB = async () => {
-  const result = await AcademicFaculty.find()
+  const result = await AcademicFaculty.find().populate('academicFaculty')
   return result
 }
 
